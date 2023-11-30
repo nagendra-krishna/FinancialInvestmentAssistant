@@ -1,0 +1,6 @@
+// kindly add this dependensies in the pom.xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.23</version> <!-- Use the latest version -->
+</dependency>
