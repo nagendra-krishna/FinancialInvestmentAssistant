@@ -1,0 +1,26 @@
+Execute the following SQL query to create a new database: (chnage name and variables as need arises)
+
+1. CREATE DATABASE financial_investment_db;
+
+Switch to the newly created database:
+
+2. USE financial_investment_db;
+
+Create a table to store investment data:
+
+3. CREATE TABLE investments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT,
+    name VARCHAR(255),
+    amount DOUBLE,
+    sector VARCHAR(255)
+);
+
+Create a MySQL User:
+
+4. CREATE USER 'your_username'@'localhost' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON financial_investment_db.* TO 'your_username'@'localhost';
+FLUSH PRIVILEGES
+
+
+the DatabaseConnector.java can be runnable now
