@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <AnchorPane fx:id="mainForm" prefHeight="200.0" prefWidth="200.0" styleClass="white-bg" stylesheets="@Loginstyle.css">
+         <children>
+            <AnchorPane fx:id="loginForm" layoutX="12.0" layoutY="15.0" prefHeight="520.0" prefWidth="312.0">
+               <children>
+                  <FontAwesomeIcon fill="#b72d69" glyphName="USER" layoutX="132.0" layoutY="77.0" size="5em" />
+                  <Label layoutX="93.0" layoutY="86.0" text="Sign In Account" textFill="#700d43">
+                     <font>
+                        <Font name="Gill Sans MT" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="loginUsername" layoutX="37.0" layoutY="152.0" prefHeight="30.0" prefWidth="237.0" promptText="Username" styleClass="textfield" stylesheets="@Loginstyle.css" />
+                  <PasswordField fx:id="loginPassword" layoutX="38.0" layoutY="197.0" prefHeight="30.0" prefWidth="237.0" promptText="Password" styleClass="textfield" stylesheets="@Loginstyle.css" />
+                  <TextField fx:id="loginShowPassword" layoutX="38.0" layoutY="197.0" prefHeight="30.0" prefWidth="237.0" promptText="Password" styleClass="textfield" stylesheets="@Loginstyle.css" visible="false" />
+                  <CheckBox fx:id="loginSelectShowPassword" layoutX="41.0" layoutY="234.0" mnemonicParsing="false" onAction="#showPassword" text="Show Password" />
+                  <Button fx:id="loginBtn" layoutX="38.0" layoutY="278.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="237.0" styleClass="btn" stylesheets="@Loginstyle.css" text="Login" />
+                  <Label layoutX="103.0" layoutY="428.0" text="Register Account">
+                     <font>
+                        <Font name="Gill Sans MT" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loginCreateAccount" layoutX="37.0" layoutY="461.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="237.0" styleClass="btn" stylesheets="@Loginstyle.css" text="Create Account" />
+                  <Hyperlink fx:id="loginForgotPassword" layoutX="164.0" layoutY="229.0" onAction="#switchForm" text="Forgot Password?">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="signupForm" layoutX="12.0" layoutY="15.0" prefHeight="520.0" prefWidth="312.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#70083e" glyphName="USER_PLUS" layoutX="122.0" layoutY="65.0" size="5em" />
+                  <Label layoutX="88.0" layoutY="74.0" text="Sign Up Account" textFill="#3f031d">
+                     <font>
+                        <Font name="Gill Sans MT" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="signupEmail" layoutX="39.0" layoutY="114.0" prefHeight="30.0" prefWidth="237.0" promptText="Email Address" styleClass="textfield" stylesheets="@Loginstyle.css" />
+                  <TextField fx:id="signupUsername" layoutX="39.0" layoutY="155.0" prefHeight="30.0" prefWidth="237.0" promptText="Username" styleClass="textfield" stylesheets="@Loginstyle.css" />
+                  <PasswordField fx:id="signupPassword" layoutX="39.0" layoutY="197.0" prefHeight="30.0" prefWidth="237.0" promptText="Password" styleClass="textfield" stylesheets="@Loginstyle.css" />
+                  <PasswordField fx:id="signupCPassword" layoutX="37.0" layoutY="240.0" prefHeight="30.0" prefWidth="237.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@Loginstyle.css" />
+                  <Button fx:id="signupBtn" layoutX="37.0" layoutY="366.0" mnemonicParsing="false" onAction="#register" prefHeight="40.0" prefWidth="237.0" styleClass="btn" stylesheets="@Loginstyle.css" text="Sign Up" />
+                  <Label layoutX="110.0" layoutY="443.0" text="Sign In Account">
+                     <font>
+                        <Font name="Gill Sans MT" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="signupLoginAccount" layoutX="38.0" layoutY="476.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="237.0" styleClass="btn" stylesheets="@Loginstyle.css" text="Login Account" />
+                  <ComboBox fx:id="signup_selectQuestion" layoutX="37.0" layoutY="284.0" prefHeight="30.0" prefWidth="237.0" promptText="Select Question" />
+                  <TextField fx:id="signupAnswer" layoutX="37.0" layoutY="325.0" prefHeight="30.0" prefWidth="237.0" promptText="Answer" styleClass="textfield" stylesheets="@Loginstyle.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="forgotForm" layoutX="12.0" layoutY="15.0" prefHeight="520.0" prefWidth="312.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#aa0957" glyphName="LOCK" layoutX="136.0" layoutY="75.0" size="5em" />
+                  <Label layoutX="86.0" layoutY="84.0" text="Forget Password" textFill="#982145">
+                     <font>
+                        <Font name="Gill Sans MT" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="forgotAnswer" layoutX="37.0" layoutY="230.0" prefHeight="30.0" prefWidth="237.0" promptText="Answer" styleClass="textfield" stylesheets="@Loginstyle.css" />
+                  <Button fx:id="forgotProceedBtn" layoutX="38.0" layoutY="277.0" mnemonicParsing="false" onAction="#forgotPassword" prefHeight="40.0" prefWidth="237.0" styleClass="btn" stylesheets="@Loginstyle.css" text="Proceed" />
+                  <Button fx:id="forgotBackBtn" layoutX="37.0" layoutY="461.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="237.0" styleClass="btn" stylesheets="@Loginstyle.css" text="Back" />
+                  <ComboBox fx:id="forgot_selectQuestion" layoutX="37.0" layoutY="184.0" prefHeight="30.0" prefWidth="237.0" promptText="Select Question" />
+                  <TextField fx:id="forgotUsername" layoutX="37.0" layoutY="141.0" prefHeight="30.0" prefWidth="237.0" promptText="Username" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="changePassForm" layoutX="12.0" layoutY="15.0" prefHeight="520.0" prefWidth="312.0" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#790a49" glyphName="LOCK" layoutX="136.0" layoutY="75.0" size="5em" text="" />
+                  <Label layoutX="86.0" layoutY="84.0" text="Forget Password" textFill="#a60c65">
+                     <font>
+                        <Font name="Gill Sans MT" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="changePassProceedBtn" layoutX="36.0" layoutY="260.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="40.0" prefWidth="237.0" styleClass="btn" stylesheets="@Loginstyle.css" text="Change Password" />
+                  <Button fx:id="changePassBackBtn" layoutX="37.0" layoutY="461.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="237.0" styleClass="btn" stylesheets="@Loginstyle.css" text="Back" />
+                  <PasswordField fx:id="changePassPassword" layoutX="36.0" layoutY="167.0" prefHeight="30.0" prefWidth="237.0" promptText="Password" />
+                  <PasswordField fx:id="changePassCPassword" layoutX="36.0" layoutY="209.0" prefHeight="30.0" prefWidth="237.0" promptText="Confirm Password" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
