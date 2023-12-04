@@ -1,0 +1,6 @@
+The file below is the updated InvestmentController.java that contains the following methods
+1. view investment details
+2. check sector exposure in investment portfolio
+3. add a visual chart representation of the portfolio allocation
+
+update the fxml file according to front end design to show pie-chart, and button to views
