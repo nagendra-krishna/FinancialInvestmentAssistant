@@ -1,0 +1,69 @@
+# Financial Investment Assistant Test Specification
+
+# Input Categories for User Activities
+# Each category is followed by its choices and constraints if any.
+
+# User Registration and Authentication
+Registration:
+    Registration form present. [single]
+    Registration form missing. [error]
+
+Validation:
+    Validation passed.
+    Validation failed. [error]
+
+Login:
+    Login successful.
+    Login failed. [error]
+
+Authentication:
+    Credentials valid.
+    Credentials invalid. [error]
+
+Logout:
+    Logout successful.
+    Logout option not available. [error]
+
+# Portfolio Management
+Portfolio Display:
+    Display complete with value.
+    Display incomplete. [error]
+
+Investment Management:
+    Add investment successful. [property InvestmentAdded]
+    Add investment failed. [error]
+    Remove investment successful. [if InvestmentAdded]
+    Remove investment failed. [error]
+
+Investment Details:
+    Details displayed.
+    Details not available. [error]
+
+# Risk Management
+Risk Mitigation:
+    Add risk strategy successful. [property RiskStrategyAdded]
+    Remove risk strategy successful. [if RiskStrategyAdded]
+    Update risk tolerance successful.
+
+# Goal Setting and Notifications
+Goal Setting:
+    Goal creation successful.
+    Goal creation failed. [error]
+
+Goal Visualization:
+    Visualization accurate.
+    Visualization inaccurate. [error]
+
+Notifications:
+    Notification sent on goal achievement.
+    Notification failed. [error]
+
+# Financial Transactions
+E-Wallet Interface:
+    E-Wallet creation successful.
+    E-Wallet creation failed. [error]
+
+E-Wallet Transactions:
+    Funds added successfully. [property FundsAdded]
+    Funds withdrawal successful. [if FundsAdded]
+    Funds withdrawal failed. [error]
